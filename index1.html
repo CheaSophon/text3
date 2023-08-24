@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="img/logo.png">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+   <link rel="stylesheet" href="style4.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;700&family=Koulen&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header -->
+    <section class="header-container">
+        <div class="logo">
+           <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHYAxQMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYCBAcBAwj/xAA9EAABBAIABAIHAwgLAAAAAAAAAQIDBAURBhIhMUFRBxMiYXGB0RQjkRUWJDIzQpOhFyY1Q1V0gpSiwdL/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAgMEAQX/xAAgEQEAAgICAgMBAAAAAAAAAAAAAQIDEQQSMkExQlEh/9oADAMBAAIRAxEAPwDuIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYuVEVN+YEVmuIsdhnRxW5JH2JkVYq1eJ000ieaMairr39jTg4yxrrEcN6DIY10qo2N2QqPhY9V7Ij19nfu3s1uB4o7Na1nZtPu5CxIqyL3ZE16tjjTyRETt5qq+JYL9WrkKc1S5EyavMxWSRvTaORQabaLtD0rnA88q4RatiVZX0rM1Rsjnbc9sb1a1VXxXl0WMAAAAAAAAAAAAAAAAAAAAAAAAAAABSvSNZWH8nMRyptz3LpfLl+pdFObelGxrJUI99WwuXXxVPoaOLETliF/GiJyxtW8W11Gmyt6/1nIq+03aIu3Kvj8SQjsKuvacnzUjKUFu01XVq00zUXSrGxXIi/I3mY7Jp3x9r+E76Hr6pWOr1otjrGm5wvE+lkotyo71lx0vRV7Pd2+PU6shyuhTyMduB60bKI2RqruJfNDqab0eZzIrFo6vO5cViY6sgU/jHjG5hMvj8Th8O7LX7cb5fUtmSNWMbrrtU+P4EpwrlMxlKk0ucwq4mVsnLHC6ZJFc3Se1tO3VVT5GNjTgAAAAAAAAAAAAAAAAAAAAAAAPFOP+lOz/WhsW/2ddifiqqdgU4J6TbXPxxfbv8AZpGz/gi/9m3gRvM0cbzfJsli5w1mqNaaaKdkH2yBYnq13NF1cnTr1aq/gc2TNZVU2mUv6/zT/qXvAZFtLL1J5F+6SRGyovZWO6O/kqlH4ixzsRnshjnJpK1h7G+9u/ZX5t0vzLOZj65d/rnLjVtx7YflnK/4pf8A90/6m1i72avZCGvXu3p5FVXeq+2PbzNaiud1V3T2UXqQ5Y+HopK2AzGRhYq2bCR42miJ1c+VdvRvv5E1/rQyWiIZImZdl9GEmQ4q4gucaZOk2rBJVbUoMa/mTlRy86p490Tw8TqBGcNYmPB4GhjItctWBse/NUTqvzXZJlKwAAAAAAAAAAAAAAAAAAAAAAAB4pRc16McXmMvaydm9fZNZejnNjczlTSInTbd+BegSpe1J3WXa2mvw51/RHhWJ/aGSXz26P8A8lC4k/MjK5aR60+JcjLWYyrLbpxt5JXRpy8yrrqvTv0P0C9qOaqL2VNKcxj4O4s4Vx2ai4SzMcsEyOlp0pImo+ORz2q5UevTfKiom+nbsStlvfyl21rW+XOVxfBKd8Fxn/DT6E/wdi62X4swFPF4rKVMLiFmuSuyEWnSzO1ra9umma+ClxysfpCXgHHNoSMTiNHt+1q1Y98u18/Y3+rvXvJvB4/iuPNuuZnNV5se+FP0GOuicknKm15u/ffj4kNoLUnY9PEXoNnHXoPNnoAAAAAAAAAAAAAAAAAAACo+kriW5w1g4JsayJbdu0ytE6VNsYrv3lT5FuIziHBY/iHGvx+Vh9bXeqO0jlarXJ2VFTsoFGj4p4h4a4js4fiOxWyzExsl6OaCFIXN5NqrVTqmunczZ6SJcjXnhixVnHyz4iW/SsSSMfzI1vflTeuvn5diaxvo7wdBLjt3LM9yutaSzasLJKkappWtVex9WcB4Vn2flSz+j0HY9n3v9y7e99O/XuBVMXxxehZjbGRsWbK/m4/Izwo2NrJnN3td8u0X4dPcSND0n15ZF/KGItUoHYtclDI+Rr/Wxp36IvRV663/ACM83w5w5g4qrZoMhKrsdJi4Uifv7pWqqoq66L7yL3wbDLUSSpkXuhx8mNSKTWlgRFVyKm0VV666dfcgE7wr6QYeIMpFj3491Z1iBZ4XtnbK3lT91/L+q7XXRr3uJ8hVyEqWZm1Y45eVvPBzRub73J1/A1sBHgsSr8ljY83cdTjihhjtTK5GRSPRuo0VddOvfrpDXst4SszT2lqZpYlesssDEckSqit6q1V6bV6eXj4FuK1KzPaFmO1a77QmV4rsUshkfXxOnrQ2Gx8yOaiRIv8ANTdtcYMgksuZTfJUqzJDNPzonK7eujfFD6/mrichVsyKllGZF8dmT7xWqip1bry+B7a4NxVm6+1IlhEkkbLLCyZUikenZXN8SXbFPpKbY59NazxmkEltfsL3V6k6RTTJImk32XXctcbkc1FTsqbQpUHAzbGWydrLSufBYtpNBFBK5qcvk9Oy9S7MajURE7ImiGTp/OqF+v1ZAArQAAAAAAAAAAAAAAAAAAAAAGKtRT5uqwPmZM+CJ0rOjJHMRXN+C+B9gBjyoOVPJDIAAAA0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/9k=" alt="">
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">Product</a>
+                </li>
+                <li>
+                    <a href="">Category</a>
+                </li>
+                <li>
+                    <a href="">About US</a>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="icon">
+            <i class="fa-solid fa-bars" id="IconMenu"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </section>
+    <!-- Homepage -->
+    <section class="container-fluid" style="background-color: rgb(235, 224, 209);">
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="des"  data-aos="fade-right"  data-aos-duration="3000">
+                    <h1>Good Choice for Mondern Youth</h1>
+                    <h2 style=" font-weight: bold;">Discound all NO LiMit</h2>
+                    <button style="margin-left: 70px;"> Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="picture" data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                <img src="https://ajluxefashion.com/cdn/shop/files/Shoes-Summer.jpg?v=1691211081&width=2000" alt="">
+                </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- featurd product -->
+    <section class="container">
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="item">
+                    <img src="https://s.alicdn.com/@sc04/kf/H26a01b2a39d746d894d4529e1fd8431as.jpg_220x220.jpg" alt="" style="object-fit: contain;">
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="item">
+                    <img src="https://sc04.alicdn.com/kf/H46defa0c493643ac92c0e7e37b9c52ee6/242277515/H46defa0c493643ac92c0e7e37b9c52ee6.jpg"  alt="" style="object-fit: contain;">
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="item">
+                    <img src="https://s.alicdn.com/@sc04/kf/H1ab21b19b00f4618869dfe80333a0165q.jpg_100x100xz.jpg" alt="" style="object-fit: contain;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- All product -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="All-prd-title">
+                    <h1>All product</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-3">
+                <div class="box-item">
+                    <div class="box-hover">
+                        <div class="box1">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="box1">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="box1">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://sc04.alicdn.com/kf/H2353c30e830747939dc0d8f5e181a2414/242277515/H2353c30e830747939dc0d8f5e181a2414.jpg" alt="">
+                    </div>
+                    <div class="desc">
+                        <p>shoes for buys</p>
+                        <p>price $50</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="box-item">
+                    <div class="box-hover">
+                        <div class="box1">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="box1">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="box1">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://sc04.alicdn.com/kf/H2353c30e830747939dc0d8f5e181a2414/242277515/H2353c30e830747939dc0d8f5e181a2414.jpg" alt="">
+                    </div>
+                    <div class="desc">
+                        <p>shoes for buys</p>
+                        <p>price $50</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="box-item">
+                    <div class="box-hover">
+                        <div class="box1">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="box1">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="box1">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://sc04.alicdn.com/kf/H2353c30e830747939dc0d8f5e181a2414/242277515/H2353c30e830747939dc0d8f5e181a2414.jpg" alt="">
+                    </div>
+                    <div class="desc">
+                        <p>shoes for buys</p>
+                        <p>price $50</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="box-item">
+                    <div class="box-hover">
+                        <div class="box1">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="box1">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="box1">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://sc04.alicdn.com/kf/H2353c30e830747939dc0d8f5e181a2414/242277515/H2353c30e830747939dc0d8f5e181a2414.jpg" alt="">
+                    </div>
+                    <div class="desc">
+                        <p>shoes for buys</p>
+                        <p>price $50</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="box-item">
+                    <div class="box-hover">
+                        <div class="box1">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="box1">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="box1">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://sc04.alicdn.com/kf/H2353c30e830747939dc0d8f5e181a2414/242277515/H2353c30e830747939dc0d8f5e181a2414.jpg" alt="">
+                    </div>
+                    <div class="desc">
+                        <p>shoes for buys</p>
+                        <p>price $50</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="box-item">
+                    <div class="box-hover">
+                        <div class="box1">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="box1">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="box1">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://sc04.alicdn.com/kf/H2353c30e830747939dc0d8f5e181a2414/242277515/H2353c30e830747939dc0d8f5e181a2414.jpg" alt="">
+                    </div>
+                    <div class="desc">
+                        <p>shoes for buys</p>
+                        <p>price $50</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="box-item">
+                    <div class="box-hover">
+                        <div class="box1">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="box1">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="box1">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://sc04.alicdn.com/kf/H2353c30e830747939dc0d8f5e181a2414/242277515/H2353c30e830747939dc0d8f5e181a2414.jpg" alt="">
+                    </div>
+                    <div class="desc">
+                        <p>shoes for buys</p>
+                        <p>price $50</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="box-item">
+                    <div class="box-hover">
+                        <div class="box1">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="box1">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="box1">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://sc04.alicdn.com/kf/H2353c30e830747939dc0d8f5e181a2414/242277515/H2353c30e830747939dc0d8f5e181a2414.jpg" alt="">
+                    </div>
+                    <div class="desc">
+                        <p>shoes for buys</p>
+                        <p>price $50</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- About us -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="about-us-title">
+                    <h1>About US</h1>
+                </div>
+            </div>
+            <div class="col-xl-12">
+                <div class="about-us-title">
+                    <h3>ពិភពរីករាយ​ ហាងលក់មួកទាន់សម័យយុវវ័យច្រើនម៉ូត</h3>
+                </div>
+            </div>
+            <div class="col-xl-12">
+                <div class="about-us-title">
+                    <h1>Contach US</h1>
+                </div>
+            </div>
+        </div>
+        <div class="box1-logo">
+            <div class="box-logo">
+                <div class="logo">
+                    <i class="fa-solid fa-location-dot" style="margin-top: 20px;"></i>
+                </div>
+                <div class="title">
+                    Cambodia
+                </div>
+            </div>  
+        </div>
+        <div class="box1-logo">
+            <div class="box-logo">
+                <div class="logo">
+                    <i class="fa-solid fa-phone-volume" style="margin-top: 20px;"></i>
+                </div>
+                <div class="title">
+                    +855 0716410229 <br>
+                </div>
+            </div>  
+        </div>
+        <div class="box1-logo">
+            <div class="box-logo">
+                <div class="logo">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="title">
+                    cheasophon35@mail.com
+                </div>
+            </div>  
+        </div> <br>
+        <div class="col-xl-6">
+            <input type="text" class="form-control" placeholder="Yuor Name">
+        </div>
+        <div class="col-xl-6">
+            <input type="text" class="form-control" placeholder="Your Email">
+        </div>
+        <div class="col-xl-6">
+            <input type="text" class="form-control" placeholder="Your PhoneNumber">
+        </div>
+        <div class="col-xl-6">
+            <input type="text" class="form-control" placeholder="Your Subjuct">
+        </div>
+        <div class="col-xl-12">
+           <textarea class="form-control" placeholder="Type Your meessage" cols="30" rows="10"></textarea>
+        </div>
+       <div class="button">
+        <div class="col-xl-3">
+            <button>Send messange</button>
+        </div>
+       </div>
+       <br>
+       <br>
+    </div>
+    <br>
+    <br>
+</body>
+<script>
+    $(document).ready(function(){
+        $('#IconMenu').click(function(){
+            $('.menu').slideToggle();
+        })
+    })
+    AOS.init();
+</script>
+</html>
